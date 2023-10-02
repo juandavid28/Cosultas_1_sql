@@ -43,3 +43,11 @@ O se puede utilizar el operador 'OR'
 
 
 ![consulta4](consulta4_2.png "Consulta 4_2")
+
+### Consulta No. 5
+
+5. Se a menor que 110 y la ciudad sea cali, se debe utilizar el operador 'AND' 
+
+'SELECT * FROM Clientes WHERE identificacion<=110 AND ciudad_nac = 'Cali'
+
+![consulta5](consulta5.png "Consulta 5")
