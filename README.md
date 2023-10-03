@@ -127,3 +127,7 @@ O se puede utilizar el operador 'OR'
 ### Modelo Entidad - Relacion
 
 ![Modelo](Modelo.png "Modelo")
+
+### Pedidos
+
+![pedidos](Pedidos.png "Pedidos")
