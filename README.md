@@ -124,10 +124,28 @@ O se puede utilizar el operador 'OR'
 |fecha vencimiento|date||
 |observacion|varchar|35|
 
+### Tabla: Pedidos
+
+![Tablapedido](tablapedidos.png "Tablapedidos")
+
 ### Modelo Entidad - Relacion
 
 ![Modelo](Modelo.png "Modelo")
 
-### Pedidos
+## Operador INNER 30IN
+- permite obtener datos de dos omas tablas.
+-cuando se realiza la concatenacion de las tablas, no necesesariamente se deben mostrar todos los datos de las tablas.
+-su formato es:
+'SELECT tabla1.campo, tabla2.campo, ... FROM tabla_principal INNER 30IN tabla_secundaria ON campo_comun_tabla11 - campo_comun_tabla2
 
-![pedidos](Pedidos.png "Pedidos")
+1. Para visualizar los campos identificacion, nombre, apellidos de a tabla cliente y no_pedido, fecha_compra, fecha_vencimiento y obsevacion de la tabla pedido,se debe realizar la siguiente instruccion.
+
+SELECT Cliente.identificacion, Cliente.nombre, Cliente.apellidos, Pedido.no_pedido, Pedido.frcha_compra, Pedido.fecha_vencimiento, Pedido.observacion FROM Cliente INNER JOIN Pedido ON Cliente.identificacion = Pedido.iden_cliente;
+
+![Inner join 1](innerjoin1.png "Inner Join 1")
+
+2. Para visualzar todos los campos de las tablas cliente y pedido donde identificacion sea mayor que 100, se debe realizar la siguiente instruccion: 
+
+SELECT Cliente .*,Pedido.* FROM Cliente INNER JOIN Pedido ON Cliente.identificacion = Pedido.iden_cliente WHERE Cliente.identificacion > 100;
+
+![Inner join 2](innerjoin2.png "Inner Join 2")
